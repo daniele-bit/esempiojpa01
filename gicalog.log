@@ -91,3 +91,4 @@
 2021-02-11 11:46:35.477 DEBUG 10120 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : delete from alunno where id=?
 2021-02-11 11:46:35.482 TRACE 10120 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [11]
 2021-02-11 11:46:35.533 DEBUG 10120 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select alunno0_.id as id1_0_, alunno0_.cognome as cognome2_0_, alunno0_.nome as nome3_0_ from alunno alunno0_
+2021-02-11 12:53:22.280  WARN 9564 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
