@@ -7,6 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * Deve implementare Serializable perché è un requisito del framework.
+ */
 @Entity
 public class Alunno implements Serializable {
     @Id

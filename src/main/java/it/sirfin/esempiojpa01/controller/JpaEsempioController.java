@@ -12,11 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class JpaEsempioController {
 
+    /**
+     * Iniettiamo il service che useremo
+     */
     @Autowired
     EsempioJpaService esempioJpaService;
 
     /**
-     * Crea degli alunni e li salva su DB.
+     * Svuota la tabella alunni. Crea degli alunni e li salva su DB.
+     * Li recupera. Ne cancella alcuni. Recupera da DB quelli rimasti
      */
     @RequestMapping("/init")
     public void init() {
@@ -38,6 +42,8 @@ public class JpaEsempioController {
         for (Alunno alunno : lista) {
             System.out.println(alunno);
         }
+        
+        // Cancella alcuni alunni (id dispari)
         lista.stream()
                 .filter(ax -> ax.getId() % 2 == 1)
                 .forEach(alu -> {
