@@ -1,6 +1,7 @@
 package it.sirfin.esempiojpa01.service;
 
 import it.sirfin.esempiojpa01.model.Alunno;
+import it.sirfin.esempiojpa01.model.Docente;
 import java.util.List;
 
 /**
@@ -17,4 +18,8 @@ public interface EsempioJpaService {
     List<Alunno> trovatTuttiGliAlunni();
 
     void cancellaAlunno(Alunno alu);
+    
+    
+    void inserisciDocente(Docente dc);
+    
 }

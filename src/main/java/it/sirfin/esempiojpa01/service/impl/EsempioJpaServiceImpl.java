@@ -1,7 +1,9 @@
 package it.sirfin.esempiojpa01.service.impl;
 
 import it.sirfin.esempiojpa01.model.Alunno;
+import it.sirfin.esempiojpa01.model.Docente;
 import it.sirfin.esempiojpa01.repository.AlunnoRepository;
+import it.sirfin.esempiojpa01.repository.DocenteRepository;
 import it.sirfin.esempiojpa01.service.EsempioJpaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,5 +47,13 @@ public class EsempioJpaServiceImpl implements EsempioJpaService{
     public void cancellaAlunno(Alunno alu) {
         alunnoRepository.delete(alu);
     }
+    
+    
+    DocenteRepository docenteRepository;
+    @Override
+    public void inserisciDocente(Docente dc){
+    docenteRepository.save(dc);
+    }
+    
 
 }

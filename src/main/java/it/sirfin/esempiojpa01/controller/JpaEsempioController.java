@@ -1,6 +1,7 @@
 package it.sirfin.esempiojpa01.controller;
 
 import it.sirfin.esempiojpa01.model.Alunno;
+import it.sirfin.esempiojpa01.model.Docente;
 import it.sirfin.esempiojpa01.service.EsempioJpaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,4 +58,30 @@ public class JpaEsempioController {
             System.out.println(alunno);
         }
     }
+    
+    
+   
+    
+     @RequestMapping("/initdc")
+    public void initDocente() {
+        // svuota la tab degli alunni
+        //esempioJpaService.svuotaTabellaAlunni();
+
+        // crea i docenti
+        Docente d = new Docente( "Paolo", "Salsa");
+        esempioJpaService.inserisciDocente(d);
+        d = new Docente("Rino", "Feltri");
+        esempioJpaService.inserisciDocente(d);
+        d = new Docente("Alberto", "Angela");
+        esempioJpaService.inserisciDocente(d);
+        d = new Docente("Elena", "Cocoli");
+        
+        
+        //recupero i docenti nella tabella
+         
+//         List<Docente> listadc = esempioJpaService.trovatTuttiIDocenti();
+//        for (Docente docente : listadc) {
+//            System.out.println(docente);
+//        }
+}
 }
